@@ -1,10 +1,10 @@
 import {useParams,Link}from "react-router-dom";
-import students from "../data";
+import {students} from "../data";
 
 function Content() {
   const { id } = useParams();
 
-  const student = students.find((s) => s.id===id);
+  const student = students.find((s) => s.id ===id);
 
   if (!student) {
     return (
@@ -15,7 +15,7 @@ function Content() {
     );
   }
 
-  return (
+  return(
     <div>
       <h1>{student.name}'s Profile</h1>
 
